@@ -9,7 +9,7 @@ phonebook::display_all( void ){
 	i = 0;
 	while (i < 8)
 	{
-		this[i].display(i);
+		c[i].display(i);
 		i++;
 	}
 }
@@ -20,27 +20,27 @@ phonebook::init( void ){
 	i = 0;
 	while (i < 8)
 	{
-		this[i].init();
+		c[i].init();
 		i++;
 	}
 }
 
-phonebook::add( this ){
+phonebook::add( void ){
 	int	i;
 
 	i = 0;
-	while (i < 8 && this[i].first_name[0] != 0)
+	while (i < 8 && c[i].first_name[0] != 0)
 		i++;
 	if (i == 8)
 		i = 0;
 	std::cout << "First Name, please (max 20 characters)" << std::endl;
-	std::cin >> this[i].first_name;
+	std::cin >> c[i].first_name;
 	std::cout << "Last Name, please (max 20 characters)" << std::endl;
-	std::cin >> this[i].last_name;
+	std::cin >> c[i].last_name;
 	std::cout << "Nickname, please (max 20 characters)" << std::endl;
-	std::cin >> this[i].nickname;
+	std::cin >> c[i].nickname;
 	std::cout << "Phone Number, please (max 14 characters)" << std::endl;
-	std::cin >> this[i].phone_number;
+	std::cin >> c[i].phone_number;
 	std::cout << "Darkest secret, please (max 250 characters)" << std::endl;
-	std::cin >> this[i].darkest_secret;
+	std::cin >> c[i].darkest_secret;
 }
