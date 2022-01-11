@@ -14,13 +14,13 @@ phonebook::display_all( void ){
 	}
 }
 
-phonebook::init(contact c[8]){
+phonebook::init( void ){
 	int	i;
 
 	i = 0;
 	while (i < 8)
 	{
-		//init c[i]
+		this[i].init();
 		i++;
 	}
 }
