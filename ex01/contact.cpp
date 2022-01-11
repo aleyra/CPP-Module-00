@@ -31,7 +31,7 @@ contact::init(void){
 	this->darkest_secret[0] = 0;
 }
 
-contact::display(int i, contact c) const {
+contact::display(int i) const {
 	char	index[11];
 	int		j;
 
@@ -40,7 +40,7 @@ contact::display(int i, contact c) const {
 	while (j < 11)
 		index[j++] = ' ';
 	index[10] = 0;
-	if (c.first_name[0] != 0)
-		std::cout << index << "|" << shorting(c.first_name) << "|"
-			<< shorting(c.last_name) << "|" << shorting(c.nickname) << std::endl;
+	if (this.first_name[0] != 0)
+		std::cout << index << "|" << shorting(this.first_name) << "|"
+			<< shorting(this.last_name) << "|" << shorting(this.nickname) << std::endl;
 }

@@ -15,6 +15,6 @@ public:
 	~contact( void );
 
 	void	init(void);
-	void	display(void) const;
+	void	display(int i) const;
 };
 #endif
