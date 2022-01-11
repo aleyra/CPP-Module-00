@@ -1,5 +1,13 @@
 #include "contact.hpp"
 
+contact::contact( void ){
+	std::cout << "Construtor called" << std::endl;
+}
+
+contact::~contact( void ){
+	std::cout << "Destructor called" << std::endl;
+}
+
 int	ft_strlen(const char *str)
 {
 	int	i;

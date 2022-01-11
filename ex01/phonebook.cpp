@@ -1,5 +1,14 @@
 #include "phonebook.hpp"
 
+phonebook::phonebook( void ){
+	this->init();
+	std::cout << "Construtor called" << std::endl;
+}
+
+phonebook::~phonebook( void ){
+	std::cout << "Destructor called" << std::endl;
+}
+
 void	phonebook::display_all( void ) const {
 	int	i;
 
