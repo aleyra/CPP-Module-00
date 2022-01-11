@@ -21,7 +21,7 @@ void	shorting(const char *str, char s[11])//aligné à droite !!!!!
 	s[10] = 0;
 }
 
-contact::init(void){
+void	contact::init(void){
 	this->first_name[0] = 0;
 	this->last_name[0] = 0;
 	this->nickname[0] = 0;
@@ -29,7 +29,7 @@ contact::init(void){
 	this->darkest_secret[0] = 0;
 }
 
-contact::display(int i) const {
+void	contact::display(int i) const {
 	char	index[11];
 	int		j;
 	char	s[11];
@@ -39,13 +39,14 @@ contact::display(int i) const {
 	while (j < 11)
 		index[j++] = ' ';
 	index[10] = 0;
-	if (this.first_name[0] != 0)
+	if (this->first_name[0] != 0)
 	{
 		std::cout << index << "|" ;
 		shorting(this->first_name, s);
-		// << shorting(this.first_name) << "|"
-		// 	<< shorting(this.last_name) << "|" << shorting(this.nickname)
-		// 	<< std::endl;
-	}
-		
+		std::cout << s << "|";
+		shorting(this->last_name, s);
+		std::cout << s << "|";
+		shorting(this->nickname, s);
+		std::cout << s << std::endl;
+	}		
 }
