@@ -1,11 +1,29 @@
 #include "contact.hpp"
-#include <iostream>
 
-void	shorting(const char *str, char s[11])//aligné à droite !!!!!
+int	ft_strlen(const char *str)
 {
-	int		i;
+	int	i;
 
 	i = 0;
+	while (str && str[i])
+		i++;
+	return (i);
+}
+
+void	shorting(const char *str, char s[11])
+{
+	int		i;
+	int		len;
+
+	i = 0;
+	len = ft_strlen(str);
+	if (len < 10)
+	while (len < 10)
+	{
+		len++;
+		s[i] = ' ';
+		i++;
+	}
 	while (str && str[i] && i <= 8)
 	{
 		s[i] = str[i];
@@ -13,11 +31,6 @@ void	shorting(const char *str, char s[11])//aligné à droite !!!!!
 	}
 	if (i <= 9 && str && str[i] && str[i + 1])
 		s[i++] = '.';
-	while (i <= 9)
-	{
-		s[i] = ' ';
-		i++;
-	}
 	s[10] = 0;
 }
 

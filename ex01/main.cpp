@@ -1,30 +1,34 @@
-#include <iostream>
 #include "phonebook.hpp"
 
-int	ft_strcmp(char *s1, char *s2) {
-	int	i;
-
-	i = 0;
-	while (s1[i] && s2[i] && s1[i] - s2[i] == 0)
-		i++;
-	return (s1[i] - s2[i]);
+int	search_option(char s1[7]) {
+	if (s1[0] == 'A' && s1[1] == 'D' && s1[2] == 'D' && s1[3] == 0)
+		return (1);
+	if (s1[0] == 'S' && s1[1] == 'E' && s1[2] == 'A' && s1[3] == 'R'
+		&& s1[4] == 'C' && s1[5] == 'H' && s1[6] == 0)
+		return (2);
+	if (s1[0] == 'E' && s1[1] == 'X' && s1[2] == 'I' && s1[3] == 'T'
+		&& s1[4] == 0)
+		return (3);
+	return (0);
 }
 
 int	main()
 {
-	char	buff[7];
+	char		buff[7];
 	phonebook	pb;
+	int			option;
 
 	while (1)
 	{
-		std::cout << "Please enter a command (ADD, SEARCH or EXIT" << std::endl;
+		std::cout << "Please enter a command (ADD, SEARCH or EXIT)" << std::endl;
 		std::cin >> buff;
-		if (ft_strcmp(buff, "EXIT") == 0)
+		option = search_option(buff);
+		if (option == 3)
 			return (0);
-		if (ft_strcmp(buff, "ADD") == 0)
+		if (option == 1)
 			pb.add();
-		else if (ft_strcmp(buff, "SEARCH") == 0)
-			std::cout << "a faire";
+		else if (option == 2)
+			pb.search();
 		else
 			std::cout << "Wrong command" << std::endl;
 	}

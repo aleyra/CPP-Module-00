@@ -15,5 +15,6 @@ public:
 	void	display_all( void ) const;
 	void	init( void );
 	void	add( void );
+	void	search( void ) const;
 };
 #endif
