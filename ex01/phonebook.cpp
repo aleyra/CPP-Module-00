@@ -1,7 +1,7 @@
 #include "phonebook.hpp"
 #include <iostream>
 
-phonebook::display_all( void ){
+void	phonebook::display_all( void ){
 	int	i;
 
 	std::cout << "index     " << "|" << "first name" << "|"
@@ -14,7 +14,7 @@ phonebook::display_all( void ){
 	}
 }
 
-phonebook::init( void ){
+void	phonebook::init( void ){
 	int	i;
 
 	i = 0;
@@ -25,7 +25,7 @@ phonebook::init( void ){
 	}
 }
 
-phonebook::add( void ){
+void	phonebook::add( void ){
 	int	i;
 
 	i = 0;
