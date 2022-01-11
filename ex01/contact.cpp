@@ -12,7 +12,7 @@ char	*shorting(const char *str)
 		s[i] = str[i];
 		i++;
 	}
-	if (i <= 9 && str && str[i])
+	if (i <= 9 && str && str[i] && str[i + 1])
 		s[i++] = '.';
 	while (i <= 9)
 	{
@@ -42,5 +42,6 @@ contact::display(int i) const {
 	index[10] = 0;
 	if (this.first_name[0] != 0)
 		std::cout << index << "|" << shorting(this.first_name) << "|"
-			<< shorting(this.last_name) << "|" << shorting(this.nickname) << std::endl;
+			<< shorting(this.last_name) << "|" << shorting(this.nickname)
+			<< std::endl;
 }

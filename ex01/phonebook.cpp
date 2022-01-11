@@ -1,7 +1,7 @@
 #include "phonebook.hpp"
 #include <iostream>
 
-phonebook::display_all(contact c[8]){
+phonebook::display_all( void ){
 	int	i;
 
 	std::cout << "index     " << "|" << "first name" << "|"
@@ -9,7 +9,7 @@ phonebook::display_all(contact c[8]){
 	i = 0;
 	while (i < 8)
 	{
-		contact::display(i, c[i]);
+		c[i].display(i);
 		i++;
 	}
 }
