@@ -6,10 +6,10 @@ NAME		=	phonebook
 PATH_OBJ	=	objs
 
 #List of sources
-SRCS		=	phonebook.cpp
+SRCS		=	phonebook.cpp contact.cpp main.cpp
 
 OBJS		=	$(addprefix $(PATH_OBJ)/, $(SRCS:.cpp=.o))
-INCS		=	phonebook.hpp
+INCS		=	phonebook.hpp contact.hpp
 
 # Commands of compilation
 COMP		=	clang++
