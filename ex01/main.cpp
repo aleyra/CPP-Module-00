@@ -1,7 +1,7 @@
 #include <iostream>
 #include "phonebook.hpp"
 
-int	ft_strcmp(char *s1, char *s2) const {
+int	ft_strcmp(char *s1, char *s2) {
 	int	i;
 
 	i = 0;
@@ -22,9 +22,9 @@ int	main()
 		if (ft_strcmp(buff, "EXIT") == 0)
 			return (0);
 		if (ft_strcmp(buff, "ADD") == 0)
-			pb.add(pb.c);
+			pb.add();
 		else if (ft_strcmp(buff, "SEARCH") == 0)
-			sdt::cout << "a faire";
+			std::cout << "a faire";
 		else
 			std::cout << "Wrong command" << std::endl;
 	}
