@@ -13,7 +13,7 @@ public:
 	~phonebook( void );
 
 	void	display_all( void ) const;
-	void	init(contact c[8]);
-	void	add(contact c[8]);
+	void	init( void );
+	void	add( void );
 };
 #endif
