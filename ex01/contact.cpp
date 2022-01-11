@@ -1,9 +1,8 @@
 #include "contact.hpp"
 #include <iostream>
 
-char	*shorting(const char *str)
+void	shorting(const char *str, char s[11])//aligné à droite !!!!!
 {
-	char	s[11];
 	int		i;
 
 	i = 0;
@@ -20,7 +19,6 @@ char	*shorting(const char *str)
 		i++;
 	}
 	s[10] = 0;
-	return (s);
 }
 
 contact::init(void){
@@ -34,6 +32,7 @@ contact::init(void){
 contact::display(int i) const {
 	char	index[11];
 	int		j;
+	char	s[11];
 
 	index[0] = '0' + i;
 	j = 1;
@@ -41,7 +40,12 @@ contact::display(int i) const {
 		index[j++] = ' ';
 	index[10] = 0;
 	if (this.first_name[0] != 0)
-		std::cout << index << "|" << shorting(this.first_name) << "|"
-			<< shorting(this.last_name) << "|" << shorting(this.nickname)
-			<< std::endl;
+	{
+		std::cout << index << "|" ;
+		shorting(this->first_name, s);
+		// << shorting(this.first_name) << "|"
+		// 	<< shorting(this.last_name) << "|" << shorting(this.nickname)
+		// 	<< std::endl;
+	}
+		
 }
