@@ -7,12 +7,13 @@ class phonebook {
 
 public:
 
-	contact	pb[8];
+	contact	c[8];
 
 	phonebook( void );
 	~phonebook( void );
 
-	void	display_all(contact pb[8]) const;
-	void	init(contact pb[8]);
+	void	display_all(contact c[8]) const;
+	void	init(contact c[8]);
+	void	add(contact c[8]);
 };
 #endif

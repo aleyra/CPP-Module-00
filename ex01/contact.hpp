@@ -5,11 +5,11 @@ class contact {
 
 public:
 
-	char	first_name[20];
-	char	last_name[20];
-	char	nickname[20];
-	char	phone_number[14];
-	char	darkest_secret[50];
+	char	first_name[21];
+	char	last_name[21];
+	char	nickname[21];
+	char	phone_number[15];
+	char	darkest_secret[51];
 
 	contact( void );
 	~contact( void );
