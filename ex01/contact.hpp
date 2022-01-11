@@ -9,7 +9,7 @@ public:
 	char	last_name[21];
 	char	nickname[21];
 	char	phone_number[15];
-	char	darkest_secret[51];
+	char	darkest_secret[251];
 
 	contact( void );
 	~contact( void );
