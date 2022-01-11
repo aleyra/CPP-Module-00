@@ -9,7 +9,7 @@ phonebook::display_all( void ){
 	i = 0;
 	while (i < 8)
 	{
-		c[i].display(i);
+		this[i].display(i);
 		i++;
 	}
 }
