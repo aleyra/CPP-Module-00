@@ -3,19 +3,19 @@
 #include <ctime>
 
 int	Account::getNbAccounts( void ){
-	return (Account::_nbAccounts);//
+	return (_nbAccounts);//
 }
 
 int	Account::getTotalAmount( void ){
-	return (Account::_totalAmount);//
+	return (_totalAmount);//
 }
 
 int	Account::getNbDeposits( void ){
-	return (Account::_totalNbDeposits);//
+	return (_totalNbDeposits);//
 }
 
 int	Account::getNbWithdrawals( void ){
-	return (Account::_totalNbWithdrawals);//
+	return (_totalNbWithdrawals);//
 }
 
 void	Account::displayAccountsInfos( void ){
