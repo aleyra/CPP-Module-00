@@ -2,6 +2,7 @@
 # define PHONEBOOK_H
 
 # include "contact.hpp"
+# include <string>
 
 class phonebook {
 

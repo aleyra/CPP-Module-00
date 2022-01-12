@@ -1,45 +1,34 @@
 #include "contact.hpp"
 
 contact::contact( void ){
-	std::cout << "Construtor called" << std::endl;
+	
 }
 
 contact::~contact( void ){
-	std::cout << "Destructor called" << std::endl;
+	
 }
 
-int	ft_strlen(const char *str)
+void	reset(char s[11])
+{
+	int i;
+
+	i = 0;
+	while (i < 11)
+		s[i++] = 0;
+}
+
+void	shorting(const char *str)
 {
 	int	i;
 
+	std::string s1 = str;
+	std::string s2 = s1.substr(0, 10);
+	if (s1.length() > s2.length())
+		s2[9] = '.';
 	i = 0;
-	while (str && str[i])
-		i++;
-	return (i);
-}
-
-void	shorting(const char *str, char s[11])
-{
-	int		i;
-	int		len;
-
-	i = 0;
-	len = ft_strlen(str);
-	if (len < 10)
-	while (len < 10)
-	{
-		len++;
-		s[i] = ' ';
-		i++;
-	}
-	while (str && str[i] && i <= 8)
-	{
-		s[i] = str[i];
-		i++;
-	}
-	if (i <= 9 && str && str[i] && str[i + 1])
-		s[i++] = '.';
-	s[10] = 0;
+	while (s2.length() + i++ < 10)
+		std::cout << " ";
+	std::cout << s2;
 }
 
 void	contact::init(void){
@@ -53,21 +42,21 @@ void	contact::init(void){
 void	contact::display(int i) const {
 	char	index[11];
 	int		j;
-	char	s[11];
 
-	index[0] = '0' + i;
-	j = 1;
-	while (j < 11)
+	std::string s;
+	j = 0;
+	while (j < 10)
 		index[j++] = ' ';
+	index[9] = '0' + i;
 	index[10] = 0;
 	if (this->first_name[0] != 0)
 	{
 		std::cout << index << "|" ;
-		shorting(this->first_name, s);
-		std::cout << s << "|";
-		shorting(this->last_name, s);
-		std::cout << s << "|";
-		shorting(this->nickname, s);
-		std::cout << s << std::endl;
+		shorting(this->first_name);
+		std::cout << "|";
+		shorting(this->last_name);
+		std::cout << "|";
+		shorting(this->nickname);
+		std::cout << std::endl;
 	}		
 }

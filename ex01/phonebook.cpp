@@ -2,11 +2,10 @@
 
 phonebook::phonebook( void ){
 	this->init();
-	std::cout << "Construtor called" << std::endl;
 }
 
 phonebook::~phonebook( void ){
-	std::cout << "Destructor called" << std::endl;
+	
 }
 
 void	phonebook::display_all( void ) const {
@@ -62,6 +61,8 @@ void	phonebook::search( void ) const {
 		<< std::endl;
 	std::cin >> buff;
 	i = buff[0] - '0';
+	if (i < 0 || i > 7)
+		i = 0;
 	std::cout << "First Name : " << c[i].first_name << std::endl;
 	std::cout << "Last Name : " << c[i].last_name << std::endl;
 	std::cout << "Nickname : " << c[i].nickname << std::endl;
