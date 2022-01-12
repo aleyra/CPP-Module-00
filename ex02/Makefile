@@ -6,7 +6,7 @@ NAME		=	account
 PATH_OBJ	=	objs
 
 #List of sources
-SRCS		=	Account.cpp test.cpp
+SRCS		=	Account.cpp tests.cpp
 
 OBJS		=	$(addprefix $(PATH_OBJ)/, $(SRCS:.cpp=.o))
 INCS		=	Account.hpp
