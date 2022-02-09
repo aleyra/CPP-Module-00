@@ -17,5 +17,8 @@ public:
 	void	init( void );
 	void	add( void );
 	void	search( void ) const;
+
+private:
+	int	_last;
 };
 #endif
