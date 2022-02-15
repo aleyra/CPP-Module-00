@@ -9,7 +9,7 @@ int	main()
 	std::string s1 ("ADD");
 	std::string s2 ("SEARCH");
 	std::string s3 ("EXIT");
-	while (1)
+	while (std::cin.good() == 1 && std::cin.eof() != 1)
 	{
 		std::cout << "Please enter a command (ADD, SEARCH or EXIT)" << std::endl;
 		std::cin >> buff;
