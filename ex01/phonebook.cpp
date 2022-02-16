@@ -37,6 +37,7 @@ void	phonebook::add( void ){
 	this->_last++;
 	if (this->_last == 8)
 		this->_last = 0;
+		c[this->_last].init();
 	std::cout << "First Name, please (max 20 characters)" << std::endl;
 	while (std::cin.good() == 1 && std::cin.eof() != 1 && c[this->_last].first_name[0] == 0){
 		std::cin >> c[this->_last].first_name;

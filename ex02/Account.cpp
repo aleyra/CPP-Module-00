@@ -47,6 +47,8 @@ Account::Account( int initial_deposit ){
 	this->_amount = initial_deposit;
 	Account::_totalAmount += initial_deposit;
 	std::cout << "\033[0m;created" << std::endl;
+	this->_nbWithdrawals = 0;
+	this->_nbDeposits = 0;
 }
 
 Account::~Account( void ){
